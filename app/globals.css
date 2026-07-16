@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: #B08D3F;
+  color: #F7F4EC;
+}
+
+.ledger-rule {
+  background-image: repeating-linear-gradient(
+    to right,
+    theme('colors.ink.200') 0,
+    theme('colors.ink.200') 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 1px;
+}
+
+/* Report / print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  .print-page {
+    padding: 0 !important;
+  }
+}
